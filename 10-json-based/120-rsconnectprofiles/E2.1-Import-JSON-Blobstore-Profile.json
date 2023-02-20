@@ -1,0 +1,99 @@
+{
+	"metaInfo": {
+		"dataIndex": "config",
+		"collectionName": "configObjects",
+		"responseObjectName": "response"
+	},
+	"configObjects": [
+		{
+			"id": "import_data_json_blob_task",
+			"name": "import_data_json_blob_task",
+			"type": "integrationprofile",
+			"data": {
+				"contexts": [
+					{
+						"context": {
+							"app": "RSConnect",
+							"service": "ENTITY_IMPORT",
+							"channel": "AZURE_BLOB_CONTAINER",
+							"format": "JSON",
+							"source": "internal",
+							"role": "admin",
+							"user": "system",
+							"subtype": "System",
+							"order": "10"
+						},
+						"jsonData": {
+							"integrationType": "System",
+							"isEnabled": "true",
+							"isMergeableWithCustom": true,
+							"statusEventEnabled": false,
+							"collect": {
+								"isBinaryStreamPersistent": "true",
+								"channel": [
+									{
+										"type": "azureBlobContainerConnector",
+										"settings": {
+											"containerName": "{{TENANT}}-import",
+											"fileType": "json",
+											"folderPath": ""
+										}
+									}
+								],
+								"format": {
+									"type": "RSJSON",
+									"version": "1.1",
+									"settings": {
+										"additionalSettings": {
+											"encoding": "utf8",
+											"dateTimeFormat": "yyyy-MM-dd",
+											"replaceValues": true
+										},
+										"extractToCollect": true
+									}
+								},
+								"filter": {
+									"include": {},
+									"exclude": {}
+								}
+							},
+							"publish": {
+								"isBinaryStreamPersistent": "false",
+								"channel": [
+									{
+										"type": "rdpConnector",
+										"settings": {
+											"type": "RSJSON",
+											"version": "1.1",
+											"requestforvaluemapping": "true"
+										}
+									}
+								],
+								"format": {
+									"type": "RSJSON",
+									"version": "1.1",
+									"batchSize": 1,
+									"settings": {
+										"additionalSettings": {
+											"encoding": "utf8",
+											"dateTimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+										}
+									}
+								},
+								"filter": {
+									"include": {},
+									"exclude": {}
+								}
+							},
+							"transform": {
+								"settings": {
+									"nullRecordTransformer": "true"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}
