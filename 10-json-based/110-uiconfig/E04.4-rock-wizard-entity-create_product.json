@@ -1,0 +1,42 @@
+{
+    "metaInfo": {
+        "dataIndex": "config",
+        "collectionName": "configObjects",
+        "responseObjectName": "response"
+    },
+    "configObjects": [{
+        "id": "rock-wizard-entity-create_product_uiConfig",
+        "name": "rock-wizard-entity-create_product",
+        "version": "1.0",
+        "type": "uiConfig",
+        "properties": {
+            "createdByService": "system",
+            "createdBy": "system"
+        },
+        "data": {
+            "contexts": [{
+                "context": {
+                    "component": "rock-wizard-entity-create",
+                    "entityType": "product"
+                },
+                "jsonData": {
+                    "config": {
+                        "steps": {
+                            "step-1-fill-initial-data": {
+                                "name": "step-1-fill-initial-data",
+                                "stepperTitle": "Fill Reqd Attributes",
+                                "visible": true
+                            },
+                            "step-2-rock-path-attribute-manage": {
+                                "visible": true
+                            },
+                            "step-3-rock-context-manage": {
+                                "visible": true
+                            }
+                        }
+                    }
+                }
+            }]
+        }
+    }]
+}

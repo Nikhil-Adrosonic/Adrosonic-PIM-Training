@@ -1,0 +1,49 @@
+{
+    "metaInfo": {
+        "dataIndex": "config",
+        "collectionName": "configObjects",
+        "responseObjectName": "response"
+    },
+    "configObjects": [
+        {
+            "id": "rock-entity-create_sku_uiConfig",
+            "name": "rock-entity-create_sku",
+            "version": "1.0",
+            "type": "uiConfig",
+            "properties": {
+                "createdByService": "system",
+                "createdBy": "system"
+            },
+            "data": {
+                "contexts": [
+                    {
+                        "context": {
+                            "component": "rock-entity-create",
+                            "entityType": "sku"
+                        },
+                        "jsonData": {
+                            "config": {
+                                "properties": {
+                                    "attributeNames": [
+                                        "mdmid",
+                                        "mdmname",
+                                        "productfeatures",
+                                        "upc",
+                                        "color",
+                                        "size",
+                                        "discount",
+                                        "listprice"
+                                    ],
+                                    "matchConfig": {
+                                        "enable-match-step": true,
+                                        "match-type": "deterministic"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "metaInfo": {
+        "dataIndex": "config",
+        "collectionName": "configObjects",
+        "responseObjectName": "response"
+    },
+    "configObjects": [
+        {
+            "id": "rock-entity-header_sku_uiConfig",
+            "name": "rock-entity-header_sku",
+            "version": "1.0",
+            "type": "uiConfig",
+            "properties": {
+                "createdByService": "system",
+                "createdBy": "system"
+            },
+            "data": {
+                "contexts": [
+                    {
+                        "context": {
+                            "component": "rock-entity-header",
+                            "entityType": "sku"
+                        },
+                        "jsonData": {
+                            "config": {
+                                "headerConfig": {
+                                    "id": {
+                                        "visible": false
+                                    },
+                                    "name": {
+                                        "visible": false
+                                    },
+                                    "typeExternalName": {
+                                        "visible": false
+                                    },
+                                    "mdmid": {
+                                        "attributeName": "mdmid",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": true
+                                    },
+                                    "mdmname": {
+                                        "attributeName": "mdmname",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": false
+                                    },
+                                    "brand": {
+                                        "attributeName": "brand",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": false
+                                    },
+                                    "color": {
+                                        "attributeName": "color",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": false
+                                    },
+                                    "size": {
+                                        "attributeName": "size",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": false
+                                    },
+                                    "listprice": {
+                                        "attributeName": "listprice",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": true
+                                    },
+                                    "createdate": {
+                                        "attributeName": "createdate",
+                                        "label": "{model.externalName}",
+                                        "visible": true,
+                                        "noTrim": false
+                                    }
+                                },
+                                "thumbnailConfig": {
+                                    "relationshipName": "hasimages",
+                                    "relationshipFilterAttributeName": "isprimary",
+                                    "relationshipFilterAttributeValue": true
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+	"metaInfo": {
+		"dataIndex": "config",
+		"collectionName": "configObjects",
+		"responseObjectName": "response"
+	},
+	"configObjects": [
+		{
+			"id": "rock-entity-todo_sku_uiConfig",
+			"name": "rock-entity-todo_sku",
+			"version": "1.0",
+			"type": "uiConfig",
+			"properties": {
+				"createdByService": "system",
+				"createdBy": "system"
+			},
+			"data": {
+				"contexts": [
+					{
+						"context": {
+							"component": "rock-entity-todo",
+                            "entityType": "sku"
+						},
+						"jsonData": {
+							"config": {
+								"todos": {
+                                    "addrelationship": {
+										"visible": false
+                                    },
+                                    "addtags": {
+                                        "data": {
+                                            "eventName": "trigger-todo-action",
+                                            "label": "Add Tags",
+                                            "type": "manageAttributes",
+                                            "config": {
+                                                "attributeNames": [
+                                                    "tags"
+                                                ]
+                                            }
+                                        },
+                                        "icon": {
+                                            "name": "pebble-icon:tag"
+                                        }
+                                    },
+                                    "managebasic":{
+                                        "icon": {
+                                            "name": "pebble-icon:tag"
+                                        },
+                                        "data": {
+                                            "type": "manageAttributes",
+                                            "label": "Manage Basic Attributes",
+                                            "eventName": "trigger-todo-action",
+                                            "config": {
+                                                "attributeGroupNames": [
+                                                    "basic"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "manageproducttitle":{
+                                        "icon": {
+                                            "name": "pebble-icon:action-add-fill"
+                                        },
+                                        "data": {
+                                            "type": "manageAttributes",
+                                            "label": "Manage SEO Attributes",
+                                            "eventName": "trigger-todo-action",
+                                            "config": {
+                                                "attributeNames": [
+                                                    "mdmname",
+                                                    "description",
+                                                    "productfeatures"
+                                                    
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "manageimages":{
+                                        "icon": {
+                                            "name": "pebble-icon:file-type-image"
+                                        },
+                                        "data": {
+                                            "type": "manageRelationships",
+                                            "label": "Manage Images",
+                                            "eventName": "trigger-todo-action",
+                                            "config": {
+                                                "relationshipTypeName": "hasimages"
+                                            }
+                                        }
+                                    },
+                                    "managevideos":{
+                                        "icon": {
+                                            "name": "pebble-icon:file-type-video"
+                                        },
+                                        "data": {
+                                            "type": "manageRelationships",
+                                            "label": "Manage Videos",
+                                            "eventName": "trigger-todo-action",
+                                            "config": {
+                                                "relationshipTypeName": "hasvideos"
+                                            }
+                                        }
+                                    }
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}

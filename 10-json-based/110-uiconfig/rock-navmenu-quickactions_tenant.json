@@ -1,0 +1,205 @@
+{
+  "metaInfo": {
+    "dataIndex": "config",
+    "collectionName": "configObjects",
+    "responseObjectName": "response"
+  },
+  "configObjects": [
+    {
+      "id": "rock-navmenu_uiConfig",
+      "name": "rock-navmenu",
+      "version": "1.0",
+      "type": "uiConfig",
+      "properties": {
+        "createdByService": "system",
+        "createdBy": "system"
+      },
+      "data": {
+        "contexts": [
+          {
+            "context": {
+              "component": "rock-navmenu",
+              "tenant": "{{TENANT}}"
+            },
+            "jsonData": {
+              "config": {
+                "quick-actions": {
+                  "subNavMenu": {
+                    "create": {
+                      "title": "{[CreTxt]}",
+                      "visible": true,
+                      "actions": {
+                        "createEntity": {
+                          "visible": false
+                        },
+                        "createProductGroup": {
+                          "name": "createProductGroup",
+                          "icon": "pebble-icon:KitFilled",
+                          "text": "{[ProductGroup]}",
+                          "visible": true,
+                          "displaySequence": 15,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "productgroup"
+                            }
+                          }
+                        },
+                        "createProduct": {
+                          "name": "createProduct",
+                          "icon": "pebble-icon:KitFilled",
+                          "text": "{[Product]}",
+                          "visible": true,
+                          "displaySequence": 30,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "product"
+                            }
+                          }
+                        },
+                        "createSKU": {
+                          "name": "createSKU",
+                          "icon": "pebble-icon:ProductFilled",
+                          "text": "{[SKU]}",
+                          "visible": true,
+                          "displaySequence": 20,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "sku"
+                            }
+                          }
+                        },
+                        "createBundle": {
+                          "name": "createBundle",
+                          "icon": "pebble-icon:KitFilled",
+                          "text": "{[Bundle]}",
+                          "visible": true,
+                          "displaySequence": 40,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "bundle"
+                            }
+                          }
+                        },
+                        "createVendor": {
+                          "name": "createVendor",
+                          "icon": "pebble-icon:User",
+                          "text": "{[VendorItem]}",
+                          "visible": false,
+                          "displaySequence": 40,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "vendor"
+                            }
+                          }
+                        },
+                        "createCustomer": {
+                          "name": "createCustomer",
+                          "icon": "pebble-icon:User",
+                          "text": "{[CusTxt]}",
+                          "visible": false,
+                          "displaySequence": 50,
+                          "dataRoute": "entity-create",
+                          "contextData": {
+                            "itemContext": {
+                              "type": "customer"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "upload": {
+                      "title": "{[Upload Data]}",
+                      "actions": {
+                        "uploadEntities": {
+                          "contextData": {
+                            "itemContext": {
+                              "type": "sku"
+                            }
+                          },
+                          "dataRoute": "upload-excel",
+                          "displaySequence": 50,
+                          "manageMappings": {
+                            "visible": true,
+                            "displaySequence": 60,
+                            "contextData": {
+                              "itemContext": {
+                                "type": "sku"
+                              }
+                            }
+                          },
+                          "uploadAssets": {
+                            "visible": true
+                          },
+                          "uploadCSV": {
+                            "contextData": {
+                              "itemContext": {
+                                "type": "sku"
+                              }
+                            }
+                          },
+                          "uploadSkus": {
+                            "name": "uploadData",
+                            "icon": "pebble-icon:ProductFilled",
+                            "text": "{[UplDatTxt]}",
+                            "visible": false,
+                            "displaySequence": 50,
+                            "dataRoute": "upload-excel",
+                            "contextData": {
+                              "itemContext": {
+                                "type": "sku"
+                              }
+                            }
+                          },
+                          "uploadXml": {
+                            "name": "uploadXml",
+                            "icon": "pebble-icon:upload-assets-filled",
+                            "text": "{[UplXmlTxt]}",
+                            "visible": true,
+                            "displaySequence": 30,
+                            "dataRoute": "upload-xml",
+                            "contextData": {}
+                          },
+                          "uploadXmlBlob": {
+                            "name": "uploadXmlBlob",
+                            "icon": "pebble-icon:upload-assets-filled",
+                            "text": "{[UplXmlBlbTxt]}",
+                            "visible": false,
+                            "displaySequence": 40,
+                            "dataRoute": "upload-xml-blob",
+                            "contextData": {}
+                          },
+                          "valueMappings": {
+                            "visible": false
+                          },
+                          "visible": true
+                        }
+                      }
+                    }
+                  },
+                  "search": {
+                    "visible": true,
+                    "subNavMenu": {
+                      "search": {
+                        "visible": true,
+                        "actions": {
+                          "search-party": {
+                            "visible": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
