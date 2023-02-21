@@ -1,0 +1,278 @@
+{
+    "metaInfo": {
+        "dataIndex": "entityModel",
+        "collectionName": "entityModels",
+        "responseObjectName": "response"
+    },
+    "entityModels": [
+        {
+            "id": "sku_ischildof_product_graphProcessModel",
+            "name": "sku_ischildof_product",
+            "type": "graphProcessModel",
+            "domain": "generic",
+            "properties": {
+                "defaultValueSource": "internal",
+                "defaultValueLocale": "en-US",
+                "graphProcessPath": "sku_ischildof_product",
+                "matchRulesOperator": "or",
+                "matchRules": [
+                    {
+                        "seq": 1,
+                        "matchType": "attributeBased",
+                        "attributeMaps": [
+                            {
+                                "parentproductid": "mdmid"
+                            }
+                        ],
+                        "noMatchResult": [
+                            {
+                                "actions": [
+                                    {
+                                        "actionName": "Create"
+                                    },
+                                    {
+                                        "actionName": "AddSourceRelationship"
+                                    },
+                                    {
+                                        "actionName": "CopyData"
+                                    }
+                                ]
+                            }
+                        ],
+                        "singleMatchResult": [
+                            {
+                                "actions": [
+                                    {
+                                        "actionName": "AddSourceRelationship"
+                                    },
+                                    {
+                                        "actionName": "CopyData"
+                                    }
+                                ]
+                            }
+                        ],
+                        "multiMatchResult": [
+                            {
+                                "actions": [
+                                    {
+                                        "actionName": "Error"
+                                    }
+                                ]
+                            }
+                        ],
+                        "smartIdAttributes": [
+                            {
+                              "attributeNames": "mdmid",
+                              "concatDelimiter": ""
+                            }
+                          ]
+                    }
+                ],
+                "relExists": [
+                    {
+                        "actions": [
+                            {
+                                "actionName": "CopyData"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "data": {
+                "attributes": {
+                    "mdmname": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "productid": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "suppliername": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "assemblyrequired": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "availableunits": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "startdate": {
+                        "properties": {
+                            "strategy": "min"
+                        }
+                    },
+                    "enddate": {
+                        "properties": {
+                            "strategy": "max"
+                        }
+                    },
+                    "backordereligible": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "brand": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "cost": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "buytodemand": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "condition": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "currency": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "daystoreturn": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "discount": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "dollarmargin": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "dropshipindicator": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "featurespecs": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "headline": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "subhead": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "description": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "color": {
+                        "properties": {
+                            "strategy": "aggregate"
+                        }
+                    },
+                    "size": {
+                        "properties": {
+                            "strategy": "aggregate"
+                        }
+                    },
+                    "upc": {
+                        "properties": {
+                            "strategy": "aggregate"
+                        }
+                    },
+                    "alternatevendor": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "internalavailabilitydate": {
+                        "properties": {
+                            "strategy": "min"
+                        }
+                    },
+                    "registered": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "trademark": {
+                        "properties": {
+                            "strategy": "copyWhenEmpty"
+                        }
+                    },
+                    "setupgoaldate": {
+                        "properties": {
+                            "strategy": "min"
+                        }
+                    },
+                    "setuppriority": {
+                        "properties": {
+                            "strategy": "min"
+                        }
+                    },
+                    "primaryimage": {
+                        "properties": {
+                            "strategy": "copy"
+                        }
+                    },
+                    "primaryimageurl": {
+                        "properties": {
+                            "strategy": "copy"
+                        }
+                    },
+                    "alternateimages": {
+                        "properties": {
+                            "strategy": "copy"
+                        }
+                    },
+                    "alternateimagesurl": {
+                        "properties": {
+                            "strategy": "copy"
+                        }
+                    }
+                },
+                "relationships": {
+                    "hasimages": [
+                        {
+                            "properties": {
+                                "externalName": "Images",
+                                "relationshipType": "association",
+                                "relatedEntityInfo": [
+                                    {
+                                        "relEntityType": "image"
+                                    }
+                                ]
+                            },"attributes": {
+                                "isprimary": {
+                                    "properties": {
+                                        "strategy": "copy"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
